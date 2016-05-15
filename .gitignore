@@ -1,0 +1,5 @@
+templates/
+dist/
+.vscode/
+.idea/
+node_modules/
