@@ -19,7 +19,7 @@ const PRETTIFY = true;
 /**
  * Compile pug templates
  *
- * @param      {Function}  done   resolve fn
+ * @param      {Function}  done   resolve cb
  */
 export default function compile(done) {
   const data = {

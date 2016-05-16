@@ -1,9 +1,10 @@
 {
   "name": "shaft-tools",
-  "version": "0.1.1",
+  "version": "0.2.0",
   "description": "",
   "main": "lib/run.js",
   "scripts": {
+    "prepublish": "rm -rf ./lib && make build",
     "postinstall": "echo \"TOOLS_DIR = ./node_modules/shaft-tools\ninclude ./node_modules/shaft-tools/Makefile\" >> ./../../Makefile"
   },
   "keywords": [],
@@ -22,6 +23,7 @@
   "dependencies": {
     "bemto.jade": "git://github.com/kandrianov/bemto",
     "bunyan": "^1.8.1",
+    "gulp-bump": "^2.1.0",
     "gulp-cached": "^1.1.0",
     "gulp-filter": "^4.0.0",
     "gulp-if": "^2.0.1",
