@@ -13,7 +13,7 @@ import getData from 'jade-get-data';
 import through from 'through2';
 
 const {NODE_ENV} = process.env;
-const TMPLS = 'templates';
+const TMPLS = `${process.cwd()}/templates`;
 const PRETTIFY = true;
 
 /**
