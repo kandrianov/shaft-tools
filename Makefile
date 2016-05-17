@@ -1,15 +1,24 @@
-LOG = $(TOOLS_BIN_DIR)/bunyan -o short
+BIN_DIR ?= './node_modules/.bin'
+TOOLS_DIR ?= '.'
+LOG = $(BIN_DIR)/bunyan -o short
 TOOLS_RUN = $(TOOLS_DIR)/lib/run
 
 # SHAFT-BUILD
-BUILD_SRC = 'src'
-BUILD_LIB = 'lib'
-PRESETS = '--presets=node5,stage-0'
+#
+# Settings:
+#   BUILD_SRC = 'src'
+#   BUILD_LIB = 'lib'
+#   PRESETS = '--presets=node5,stage-0'
+#
+# Commands:
+#   build
+#   build-with-sources
+#   build-and-watch
+#   build-with-sources-and-watch
+#   clean-build
+#
 include ./node_modules/shaft-build/Makefile
 # /SHAFT-BUILD
-
-tools-name:
-	@echo "\033[34m shaft-tools \033[0m"
 
 #
 # PUG COMPILING

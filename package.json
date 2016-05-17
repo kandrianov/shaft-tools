@@ -1,10 +1,11 @@
 {
   "name": "shaft-tools",
-  "version": "0.2.3",
+  "version": "0.2.4",
   "description": "",
   "main": "lib/run.js",
   "scripts": {
-    "prepublish": "rm -rf ./lib && make build"
+    "prepublish": "rm -rf ./lib && make build",
+    "postinstall": "./install.sh"
   },
   "keywords": [],
   "author": "Konstantsin Andrianov",
