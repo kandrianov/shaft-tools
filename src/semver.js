@@ -13,7 +13,7 @@ export function patch(done) {
   src(input)
     .pipe(bump())
     .pipe(output)
-    .on('end', () => done());
+    .on('finish', () => done());
 }
 
 /**
@@ -25,7 +25,7 @@ export function minor(done) {
   src(input)
     .pipe(bump({type: 'minor'}))
     .pipe(output)
-    .on('end', () => done());
+    .on('finish', () => done());
 }
 
 /**
@@ -37,5 +37,5 @@ export function major(done) {
   src(input)
     .pipe(bump({type: 'major'}))
     .pipe(output)
-    .on('end', () => done());
+    .on('finish', () => done());
 }

@@ -62,5 +62,5 @@ export default function compile(done) {
     })))
     .pipe(rename({dirname: '.'}))
     .pipe(dest('dist'))
-    .on('end', () => done());
+    .on('finish', () => done());
 }
